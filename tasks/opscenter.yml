@@ -21,7 +21,7 @@
     shell: echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.community.list
 
   - name: adding repo key
-    shell: curl -L https://debian.datastax.com/debian/repo_key | sudo apt-key add -
+    get_url: curl -L https://debian.datastax.com/debian/repo_key | sudo apt-key add -
 
   - name: updating machine
     shell: apt-get update

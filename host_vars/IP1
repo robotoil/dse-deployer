@@ -1,5 +1,0 @@
-config:
-   cluster_name: 'DSE Cluster'
-   seeds: 'seed'
-   listen_address: listen address
-   rpc_address: rpc address

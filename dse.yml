@@ -1,5 +1,5 @@
 ---
-- hosts: [ "DC1" ]
+- hosts: nodes
   user: root
   sudo: True
   tasks:
