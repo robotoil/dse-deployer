@@ -7,10 +7,10 @@ Playbook for building DSE clusters anywhere.
 
 #3 Edit hosts file to include yours.
 
-#4 Edit host_vars to include the config variables.
+##4 Edit host_vars to include the config variables.
 
-# Edit site.yml to include any new hosts to run against.
+##5 Edit site.yml to include any new hosts to run against.
 
-#Run ```ansible-playbook -i hosts site.yml``` to build your cluster.
+##Run ```ansible-playbook -i hosts site.yml``` to build your cluster.
 
-Voila. 
+Voila.
