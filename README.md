@@ -20,10 +20,10 @@ To build a DSE Cassandra cluster:
 
 Run ```ansible-playbook -i hosts dse.yml```
 
-To build a Spark Cluster
+To build a Spark Cluster:
 
 Run ```ansible-playbook -i hosts spark.yml```
 
-To build a Solr Cluster
+To build a Solr Cluster:
 
 Run ```ansible-playbook -i hosts solr.yml```
