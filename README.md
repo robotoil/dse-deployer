@@ -26,7 +26,7 @@ To build a Solr Cluster:
 
 Run ```ansible-playbook -i hosts solr.yml```
 
-##For Cassandra and Spark multi-dc deployments
+###For Cassandra and Spark multi-dc deployments
 
 1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
 
@@ -34,7 +34,7 @@ Run ```ansible-playbook -i hosts solr.yml```
 
 Run ```ansible-playbook -i hosts multi-spark.yml```
 
-##For Cassandra and Solr multi-dc deployments:
+###For Cassandra and Solr multi-dc deployments:
 
 1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
 
