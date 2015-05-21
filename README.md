@@ -10,8 +10,6 @@ git clone https://github.com/joeljacobson/dse-deployer.git
 
 3. Have [Ansible](http://docs.ansible.com/intro_installation.html) installed on your machine.
 
-4. Edit ```site.yml``` to include hosts 
-
 5. Edit the ```hosts``` file
 
 6. Change ```host_vars``` to IP and config variables.   
@@ -28,6 +26,18 @@ To build a Solr Cluster:
 
 Run ```ansible-playbook -i hosts solr.yml```
 
+##For a DSE and Spark multi-dc deployments
 
+1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
 
-TODO: Build in multi-datacenter capabilites. 
+2. Change the ```host_vars``` to IP and config variables (remember to include a seed from each dc).
+
+Run ```ansible-playbook -i hosts multi-spark.yml```
+
+##For a DSE and Solr multi-dc deployments:
+
+1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
+
+2. Change the ```host_vars``` to IP and config variables (remember to include a seed from each dc).
+
+Run ```ansible-playbook -i hosts multi-solr.yml```
