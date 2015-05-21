@@ -32,6 +32,8 @@ Run ```ansible-playbook -i hosts solr.yml```
 
 2. Change the ```host_vars``` to IP and config variables (remember to include a seed from each dc).
 
+3. Edit the cassandra-topology.properies template accordingly.
+
 Run ```ansible-playbook -i hosts multi-spark.yml```
 
 ###Cassandra and Solr multi-dc deployments
@@ -39,5 +41,7 @@ Run ```ansible-playbook -i hosts multi-spark.yml```
 1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
 
 2. Change the ```host_vars``` to IP and config variables (remember to include a seed from each dc).
+
+3. Edit the cassandra-topology.properies template accordingly.
 
 Run ```ansible-playbook -i hosts multi-solr.yml```
