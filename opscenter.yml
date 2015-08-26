@@ -1,6 +1,6 @@
 ---
 - hosts: opscenter
-  user: vagrant
+  user: lupe
   sudo: True
   tasks:
   - name: updating machine
@@ -18,10 +18,10 @@
       - python-software-properties
 
   - name: adding repo
-    shell: echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.community.list
+    shell: 'echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.community.list'
 
   - name: adding repo key
-    get_url: curl -L https://debian.datastax.com/debian/repo_key | sudo apt-key add -
+    shell: 'curl -L https://debian.datastax.com/debian/repo_key | sudo apt-key add -'
 
   - name: updating machine
     apt: upgrade=dist
