@@ -1,0 +1,24 @@
+
+- name: Install datastax-agent package (apt)
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: installed
+  with_items:
+    - datastax-agent
+
+- name: Update datastax-agent configuration
+  template: src=templates/address.yaml dest=/var/lib/datastax-agent/conf/address.yaml
+  #notify: Restart datastax-agent
+
+#- name: Upload agentKeyStore keyfile
+#  copy:
+#    src: /tmp/agentKeyStore
+#    dest: /var/lib/datastax-agent/ssl/agentKeyStore
+#  notify: Restart datastax-agent
+#  when: opscenter_config.use_ssl_agents
+
+- meta: flush_handlers
+
+- name: Make sure the datastax-agent is running
+  service: name=datastax-agent state=started enabled=yes
